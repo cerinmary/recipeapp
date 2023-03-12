@@ -1,0 +1,16 @@
+const mongoose = require("mongoose");
+//connecting database
+mongoose.connect("mongodb+srv://cerinmary:cerinsiby@cluster0.ck6wsrc.mongodb.net/?retryWrites=true&w=majority")
+
+const Schema = mongoose.Schema;
+
+
+var recipeSchema = new Schema({
+  rName : String,
+  rDuration : String,
+  rServings : String
+  
+});
+
+var RecipeInfo=mongoose.model("recipes",recipeSchema);
+module.exports = RecipeInfo;
